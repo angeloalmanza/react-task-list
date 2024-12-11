@@ -80,7 +80,7 @@ function App() {
   const notCompletedTasksList = () => {
     return notCompletedTasks.map((curTask) => 
     <ul key={curTask.id}>
-      <li>{curTask.title} <button>{curTask.state}</button></li>
+      <li>{curTask.title} <button className={`${curTask.state}`}>{curTask.state}</button></li>
       <li>Priority : {curTask.priority}</li>
       <li>Est. time {curTask.estimatedTime}</li>
     </ul>)
@@ -94,7 +94,7 @@ function App() {
   const completedTasksList = () => {
     return completedTasks.map((curTask) => 
     <ul key={curTask.id}>
-      <li>{curTask.title} <button>{curTask.state}</button></li>
+      <li>{curTask.title} <button className={`${curTask.state}`}>{curTask.state}</button></li>
       <li>Priority : {curTask.priority}</li>
       <li>Est. time {curTask.estimatedTime}</li>
     </ul>)
@@ -102,11 +102,13 @@ function App() {
 
   return (
     <>
-    <h1>Task Manager</h1>
-    <h3>Current Tasks (4)</h3>
+    <header>
+      <h1>Task Manager</h1>
+    </header>
+    <h3>Current Tasks ({notCompletedTasks.length})</h3>
     <div>{notCompletedTasksList()}</div>
     <hr/>
-    <h3>Completed Tasks (6)</h3>
+    <h3>Completed Tasks ({completedTasks.length})</h3>
     <div>{completedTasksList()}</div>
     </>
   )

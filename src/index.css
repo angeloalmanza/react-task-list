@@ -1,0 +1,39 @@
+header {
+    background-color: #aef9e7;
+    height: 80px;
+}
+
+h1 {
+    margin: 0;
+    padding-top: 20px;
+}
+
+h1, 
+h3 {
+    margin-left: 20px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-left: 20px;
+}
+
+ul li:first-child {
+    font-weight: bold;
+}
+
+.backlog {
+    background-color: red;
+}
+
+.in_progress {
+    background-color: yellow;
+}
+
+.completed {
+    background-color: lightgreen;
+}
